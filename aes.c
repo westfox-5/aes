@@ -17,9 +17,9 @@ const Key* create_key_128(const char* data, size_t size) {
 	int num_cols = KEY_MAX_SIZE / 32;
 	int num_rows = num_blocks / num_cols;	
 
-	//	printf("blocks: %u\n", num_blocks);
-	//  printf("cols: %u\n", num_cols);
-	//	printf("rows: %u\n", num_rows);
+	// printf("blocks: %u\n", num_blocks);
+	// printf("cols: %u\n", num_cols);
+	// printf("rows: %u\n", num_rows);
 
 	key->num_cols = num_cols;
 	key->num_rows = num_rows;
@@ -64,8 +64,6 @@ void dump_block(FILE* stream, Block* block, int i, int j)
 	  }
   }
   fprintf(stream, "\t");
-  
-  
 }
 
 void dump_key(FILE* stream, const Key* key)
