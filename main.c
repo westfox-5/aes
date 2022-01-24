@@ -2,13 +2,17 @@
 #include <string.h>
 
 #include "aes.h"
-  
+
 int main() {
-  const char *passphrase = "ABCD";
-  const Key *key = create_key_128(passphrase, strlen(passphrase));
-  printf("Key created! [Passphrase: \'%s\', Size: %d]\n", passphrase, key->size);
+	const char *passphrase = "ABCDEFGHIJKLMNOPv";
 
-  dump_key(stdout, key);
+	// test key creation & dumping
+	Key* key = create_key_128(passphrase, strlen(passphrase));
+	dump_key(stdout, key);
 
-  return 0;
+	// test key disposing & dumping (should fail)
+	dispose_key(key);
+	dump_key(stdout, key);
+
+	return 0;
 } 
