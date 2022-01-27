@@ -1,12 +1,12 @@
-#include "block.h"
+#include "aes_block.h"
 
-void dispose_block(Block* block)
+void dispose_block(Block *block)
 {
 	free(block->data);
 	block->size = 0;
 }
 
-void dump_block(FILE* stream, Block* block)
+void dump_block(FILE *stream, Block* block)
 {
 	if (block->size <= 0) return;
 	
