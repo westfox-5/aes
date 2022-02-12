@@ -14,8 +14,8 @@ typedef struct {
 	Block **blocks;
 } State;
 
-State* create_state_192(const char *data, int size);
-void dump_state(FILE *stream, const State *state);
-void dispose_state(State *state);
+extern State* create_state_192(const char *data, int size);
+extern void dump_state(FILE *stream, const State *state);
+extern void dispose_state(State *state);
 
 #endif //STATE_H

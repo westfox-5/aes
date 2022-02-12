@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "src/aes.h"
+#include "aes.h"
 
 int main(void) {
-	const char *passphrase = "ABCDEFGHIJKLMNOPv";
+	const char *passphrase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	// test key creation & dumping
 	Key *key = create_key_128(passphrase, strlen(passphrase));

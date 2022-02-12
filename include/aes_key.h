@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#include "./aes_block.h"
+#include "aes_block.h"
 
 typedef struct {
 	int num_cols;
@@ -13,8 +13,8 @@ typedef struct {
 	Block **blocks;
 } Key;
 
-Key* create_key_128(const char *data, int size);
-void dispose_key(Key *key);
-void dump_key(FILE *stream, const Key *key);
+extern Key* create_key_128(const char *data, int size);
+extern void dispose_key(Key *key);
+extern void dump_key(FILE *stream, const Key *key);
 
 #endif //KEY_H

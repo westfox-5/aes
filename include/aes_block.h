@@ -11,7 +11,7 @@ typedef struct {
 	char *data;
 } Block;
 
-void dispose_block(Block *block);
-void dump_block(FILE *stream, Block *block);
+extern void dispose_block(Block *block);
+extern void dump_block(FILE *stream, Block *block);
 
 #endif //BLOCK_H
