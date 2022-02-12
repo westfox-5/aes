@@ -41,7 +41,7 @@ $(LIB): $(OBJ) | $(DIST_DIR)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-$(BIN_DIR) $(OBJ_DIR) $(DIST_DIR) $(DIST_DIR):
+$(BIN_DIR) $(OBJ_DIR) $(DIST_DIR):
 	mkdir -p $@
 
 -include $(OBJ:.o=.d) # The dash is used to silence errors if the files don't exist yet
